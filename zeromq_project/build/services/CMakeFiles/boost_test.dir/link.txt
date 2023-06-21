@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,-copy-dt-needed-entries CMakeFiles/boost_test.dir/boost_test.cc.o -o boost_test   -L/home/hjiang/cpp_workout/zeromq_project/build/lib 

@@ -1,0 +1,12 @@
+prefix=/root/testing/libzmq/build/local_install
+exec_prefix=/root/testing/libzmq/build/local_install
+libdir=/root/testing/libzmq/build/local_install/lib
+includedir=/root/testing/libzmq/build/local_install/include
+
+Name: libzmq
+Description: 0MQ c++ library
+Version: 4.3.5
+Libs: -L${libdir} -lzmq
+Libs.private: -lstdc++  -lrt
+Requires.private: 
+Cflags: -I${includedir} -DZMQ_BUILD_DRAFT_API=1

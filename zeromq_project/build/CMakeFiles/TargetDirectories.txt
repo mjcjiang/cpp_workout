@@ -1,0 +1,8 @@
+/home/hjiang/cpp_workout/zeromq_project/build/CMakeFiles/edit_cache.dir
+/home/hjiang/cpp_workout/zeromq_project/build/CMakeFiles/rebuild_cache.dir
+/home/hjiang/cpp_workout/zeromq_project/build/deps/CMakeFiles/edit_cache.dir
+/home/hjiang/cpp_workout/zeromq_project/build/deps/CMakeFiles/rebuild_cache.dir
+/home/hjiang/cpp_workout/zeromq_project/build/services/CMakeFiles/cppzmq_example.dir
+/home/hjiang/cpp_workout/zeromq_project/build/services/CMakeFiles/boost_test.dir
+/home/hjiang/cpp_workout/zeromq_project/build/services/CMakeFiles/edit_cache.dir
+/home/hjiang/cpp_workout/zeromq_project/build/services/CMakeFiles/rebuild_cache.dir
