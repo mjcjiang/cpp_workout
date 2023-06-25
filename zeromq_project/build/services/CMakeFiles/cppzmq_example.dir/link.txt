@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,-copy-dt-needed-entries CMakeFiles/cppzmq_example.dir/cppzmq_example.cc.o -o cppzmq_example   -L/home/hjiang/cpp_workout/zeromq_project/build/lib  -Wl,-rpath,/home/hjiang/cpp_workout/zeromq_project/build/lib -lzmq 
