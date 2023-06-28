@@ -10,3 +10,6 @@ add_executable (cppzmq_example cppzmq_example.cc)
 target_link_libraries(cppzmq_example zmq)
 
 add_executable (boost_test boost_test.cc)
+
+add_executable (ice_publisher ice_publisher.cc)
+target_link_libraries(ice_publisher iceoryx_posh iceoryx_dust)
