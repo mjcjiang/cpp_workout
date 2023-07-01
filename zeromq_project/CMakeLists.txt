@@ -17,6 +17,8 @@ execute_process( COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/
 execute_process( COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/deps/boost-1.82.0/lib lib)
 execute_process( COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/deps/iceoryx-1.0.0/lib lib)
 
+file(COPY ${CMAKE_SOURCE_DIR}/deps/iceoryx-1.0.0/bin/iox-roudi DESTINATION services)
+
 set(LIBRARY_OUTPUT_PATH "${PROJECT_BINRY_DIR}/lib")
 
 ADD_SUBDIRECTORY(deps)
