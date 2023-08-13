@@ -4,6 +4,7 @@
 #include <iostream>
 #include <map>
 #include <typeinfo>
+#include <type_traits>
 
 std::set<std::string> names;
 std::map<int, std::string> name_table = {
@@ -40,6 +41,26 @@ void logAndAdd(int idx) {
     names.emplace(name_table[idx]);
 }
 
+
+template <typename T> void LogAndAdd(T &&name);
+
+template <typename T>
+void LogAndAddImpl(T &&name, std::false_type) {
+    auto now = std::chrono::system_clock::now();
+    std::cout << now.time_since_epoch().count() << " : " << "LogAndAdd" << std::endl;
+    names.emplace(std::forward<T>(name));
+}
+
+void LogAndAddImpl(int idx, std::true_type) {
+    LogAndAdd(nameFromIdx(idx));
+}
+
+template <typename T> void LogAndAdd(T &&name) {
+    LogAndAddImpl(std::forward<T>(name),
+                  std::is_integral<typename std::remove_reference<T>::type>()
+                  );
+}
+
 /*
 class Point{
 public:
@@ -68,17 +89,17 @@ private:
 };
 
 int main() {
-    /*
     std::string petName("Darla");
-    logAndAdd(petName);
-    logAndAdd(std::string("Shasha"));
-    logAndAdd("Jakey");
+    LogAndAdd(petName);
+    LogAndAdd(std::string("Shasha"));
+    LogAndAdd("Jakey");
 
-    logAndAdd(1002);
-    logAndAdd(short(1001));
-    */
+    LogAndAdd(1002);
+    LogAndAdd(short(1001));
 
+    /*
     const Person p("jakey");
     auto cloneOfP(p);
+    */
     return 0;
 }
