@@ -55,6 +55,7 @@ public:
     }
 
     void show_list() {
+        std::lock_guard<std::mutex> guard(list_mutex_);
         std::cout << "--------------------------------" << std::endl;
         for (auto &e : record_list_) {
             e.show_record();
