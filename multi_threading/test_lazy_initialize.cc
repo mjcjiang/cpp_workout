@@ -3,6 +3,7 @@
 #include <mutex>
 #include <memory>
 #include <thread>
+#include <random>
 
 class File
 {
@@ -47,9 +48,6 @@ public:
 class SomeResource {
 };
 
-
-#include <random>
-
 class IntUniRdGen {
 public:
     IntUniRdGen(int start, int end) : start(start), end(end) {
@@ -59,7 +57,7 @@ public:
     int gen_random() {
         return dis(gen);
     }
-  private:
+private:
     int start = 0;
     int end = 0;
     std::random_device rd;
