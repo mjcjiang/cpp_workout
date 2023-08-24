@@ -6,7 +6,7 @@ template <typename T, size_t N>
 class BigClass {
 public:
     BigClass(const T& init) {
-        for (auto &x : members) 
+        for (auto &x : members)
             x = init;
     }
 
